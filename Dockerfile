@@ -17,8 +17,8 @@ RUN apt-get install -y debian-archive-keyring  # debian only
 RUN apt-get install -y apt-transport-https
 # For Debian Stretch, Ubuntu 16.04 and later
 RUN keyring_location=/usr/share/keyrings/enterprisedb-enterprise-archive-keyring.gpg
-RUN curl -1sLf 'https://downloads.enterprisedb.com/mZpV1Zt6M8PsfgGO3010kxDXv3j3HzVm/enterprise/gpg.E71EB0829F1EF813.key' |  gpg --dearmor > /usr/share/keyrings/enterprisedb-enterprise-archive-keyring.gpg
-RUN curl -1sLf 'https://downloads.enterprisedb.com/mZpV1Zt6M8PsfgGO3010kxDXv3j3HzVm/enterprise/config.deb.txt?distro=debian&codename=bookworm' > /etc/apt/sources.list.d/enterprisedb-enterprise.list
+RUN curl -1sLf 'https://downloads.enterprisedb.com/<<edbtoken>>/enterprise/gpg.E71EB0829F1EF813.key' |  gpg --dearmor > /usr/share/keyrings/enterprisedb-enterprise-archive-keyring.gpg
+RUN curl -1sLf 'https://downloads.enterprisedb.com/<<edbtoken>>/enterprise/config.deb.txt?distro=debian&codename=bookworm' > /etc/apt/sources.list.d/enterprisedb-enterprise.list
 RUN apt-get update
 
 RUN apt-get -y install edb-lasso
