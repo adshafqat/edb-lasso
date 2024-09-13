@@ -1,0 +1,18 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edb-lasso
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edb-lasso
+  template:
+    metadata:
+      labels:
+        app: edb-lasso
+    spec:
+      containers:
+      - name: edb-lasso
+        image: jfrog.uk.ngridtools.com/docker-proxy/ashafqat/edb-lasso:v1.10
