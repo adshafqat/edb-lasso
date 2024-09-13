@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
       - name: edb-lasso
-        image: jfrog.uk.ngridtools.com/docker-proxy/ashafqat/edb-lasso:v1.10
+        image: dockerhub.io/ashafqat/edb-lasso:v1.10
